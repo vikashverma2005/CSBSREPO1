@@ -1,0 +1,31 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+	string userinput;
+	ofstream fileDemo("D:/vikashverma/hello.txt");
+	if(fileDemo.is_open())
+	{
+		
+		cout<<"Enter the content you want to write to the file(Type END to finish)"<<endl;
+	    while(true)
+	    {
+		   getline(cin,userinput);
+		   if(userinput=="END")
+		   {
+		   	break;
+		   }
+		   fileDemo<<userinput<<endl;
+	     }
+	     fileDemo.close();
+	     cout<<"File has been Written";
+		
+		
+		
+	}
+	else
+	{
+		cout<<"File opening is fail"<<endl;
+	}
+}
